@@ -5,7 +5,7 @@ const puppeteer = require('puppeteer');
     
         let betech= 'https://btech.com/en/moblies/mobile-phones-smartphones/smartphones.html';
     
-        const browser = await puppeteer.launch({headless: true, defaultViewport: null, args: ['--start-maximized']});
+        const browser = await puppeteer.launch({headless: false, defaultViewport: null, args: ['--start-maximized']});
         const page = await browser.newPage();
         
         await page.goto(betech);
@@ -43,9 +43,5 @@ const puppeteer = require('puppeteer');
                         products.push(product);
                 }
                 return products;
-        }
-          
-  
-
-        
+        }      
 })();
